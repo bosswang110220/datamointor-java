@@ -2,13 +2,14 @@ package com.wxy.bigdata.enums;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Administrator
- * Date: 2018/7/23
- * Time: 17:53
+ * Description:标准返回状态码及提示
+ * User: WangYN
+ * Date: 2018/12/5
+ * Time: 15:52
  * To change this template use File | Settings | File Templates.
- * Description:
+ * Version: V1.0
  */
-public enum RetrunCode {
+public enum StatusCode {
 
     OK(200, "请求已经成功处理"),
     CREATED(201, "请求已经成功处理，并创建了资源"),
@@ -28,9 +29,10 @@ public enum RetrunCode {
 
     private int key;
     private String value;
+
     //自定义的构造函数，参数数量，名字随便自己取
     //构造器默认也只能是private, 从而保证构造函数只能在内部使用
-    private RetrunCode(int key, String value)
+    private StatusCode(int key, String value)
     {
         this.key = key;
         this.value = value;
@@ -59,5 +61,4 @@ public enum RetrunCode {
     {
         return this.key+":"+this.value;
     }
-
 }

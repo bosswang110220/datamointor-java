@@ -1,7 +1,7 @@
 package com.wxy.bigdata.controller;
 
 import com.wxy.bigdata.entity.User;
-import com.wxy.bigdata.enums.RetrunCode;
+import com.wxy.bigdata.enums.StatusCode;
 import com.wxy.bigdata.service.UserService;
 import com.wxy.bigdata.utils.JsonResult;
 import io.swagger.annotations.ApiImplicitParam;
@@ -22,8 +22,8 @@ public class UserController {
         JsonResult jsonResult=new JsonResult();
         User user=userService.selectByPrimaryKey(id);
         jsonResult.setResult(user);
-        jsonResult.setMsg(RetrunCode.OK.getValue());
-        jsonResult.setStatus(RetrunCode.OK.getKey());
+        jsonResult.setMsg(StatusCode.OK.getValue());
+        jsonResult.setStatus(StatusCode.OK.getKey());
        return jsonResult;
     }
 

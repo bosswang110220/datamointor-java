@@ -34,8 +34,8 @@ public class SwaggerConfiguration {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("springboot利用swagger构建api文档")
-                .description("简单优雅的restfun风格")
+                .title("springboot利用swagger构建api文档-wxy")
+                .description("王小一教你简单优雅的使用restfun风格")
                 .termsOfServiceUrl("")
                 .version("1.0")
                 .build();
