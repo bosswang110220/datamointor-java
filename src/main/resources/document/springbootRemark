@@ -1,0 +1,28 @@
+SpringBoot 项目说明文档
+
+    1.SpringBoot工程入口类BigdataApplication的main方法运行就是运行整个项目,
+    当前类一定要放在根目录下;
+    2.SpringBoot内嵌tomcat;
+
+   SpringBoot 工程启动方式
+    Application类main方法启动
+    mvn clean install/package cd 到target目录，java -jar 项目.jar，注意这里需要加入依赖spring-boot-maven-plugin生成可执行的jar
+    mvn spring-boot: run 启动
+
+    SpringBoot 常用注解：
+     @RestController == @Controller + @ResponseBody
+     @SpringBootApplication = @SpringBootConfiguration + @EnableAutoConfiguration + @ComponentScan
+     @SpringBootConfiguration = @Configuration = @Component
+     在Spring中@Component泛指组件，当组件不好归类的时候，我们可以使用这个注解进行标注。
+     当**@ComponentScan**扫描到该注解时，加入到Spring容器中，类似的注解除了@Component，
+     还有@Service，@Controller，@Repository等。
+
+     @ComponentScan 指定注解扫描地址，默认为该类同级路径。
+     即能扫描到本项目中web包下面的HelloController的@RestController注解
+
+     @EnableAutoConfiguration 注解用来自动配置,我们pom中配置了 spring-boot-starter-web，
+     所以spring会来创建一 个web应用来配置程序，也就是根据依赖jar，自动进行装配操作，
+     同样，如果Pom中或者加入了mysql jdbc 包，那么会自动去构建一个数据库配置，
+     如果你在application.properties/.yml中没有配置mysql jdbc，那么启动会报错，
+     如果引入了相关jar包，但是需要springboot不自动配置，那么需要配置exclude
+     比如：@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
