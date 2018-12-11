@@ -71,7 +71,7 @@ public class InitMenu {
         customerButton.setSub_button(new Button[]{button31,button32,button33});
 
         ViewButton company=new ViewButton();
-        company.setName("小一说66");
+        company.setName("小一说");
         company.setType("view");
         company.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + GlobalParam.APPID + "&redirect_uri=http%3A%2F%2F"+GlobalParam.siteDomain+"%2F"+GlobalParam.systemName+"%2Fcommon%3Fservice%3Dfront.mobile_wx.myUnit.myUnit%26type%3Dpage%26data%3D%7BmemberId%3D"+123+"%7D&response_type=code&scope=snsapi_userinfo&state=1&connect_redirect=1#wechat_redirect");
 
